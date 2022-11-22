@@ -6,9 +6,9 @@ describe('Register', () => {
   })
 
   it('Sign in', () => {
-    cy.get("input[name=firstName").type("Marta");
-    cy.get("input[name=lastName").type("da Silva");
-    cy.get("textarea[name=adress").type("Rua coberta - Gramado/RS");
+    cy.get("input[name=firstName]").type("Marta");
+    cy.get("input[name=lastName]").type("da Silva");
+    cy.get("textarea[name=adress]").type("Rua coberta - Gramado/RS");
     cy.get("input[type=email").type("marta@mailinator.com");
 
     click(get("input[value=f]"));
