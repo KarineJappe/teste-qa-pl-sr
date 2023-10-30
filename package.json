@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KarineJappe/teste-qa-pl-sr#readme",
   "devDependencies": {
-    "cypress": "^9.5.0"
+    "cypress": "^13.3.3",
+    "faker-br": "^0.4.1"
   }
 }

@@ -1,16 +1,16 @@
-Cypress.Commands.add('signUp', (name, email) => {
+Cypress.Commands.add('signUp', (name, email, password) => {
   cy.get("input[data-qa=signup-name]").type(name);
   cy.get("input[data-qa=signup-email]").type(email);
 
   cy.get("button[data-qa=signup-button]").click();
-  cy.accountInformation();
+  cy.accountInformation(name, password);
 })
 
-Cypress.Commands.add("accountInformation", () => {
+Cypress.Commands.add("accountInformation", (name, password) => {
   cy.get("#id_gender1").click();
-  cy.get("#name").type("Sonia");
+  cy.get("#name").type(name);
   
-  cy.get("#password").type("password@");
+  cy.get("#password").type(password);
   cy.get("#days").select("1");
   cy.get("#months").select("4");
   cy.get("#years").select("1997");
